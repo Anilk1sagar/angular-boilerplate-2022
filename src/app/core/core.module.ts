@@ -6,7 +6,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MainLayoutComponent } from './components/layouts/main-layout/main-layout.component';
 // Interceptors and guards
 import { AuthInterceptor } from './interceptors/auth.interceptor';
-import { ErrorInterceptor } from './interceptors/error.interceptor';
+import { HttpErrorInterceptor } from './interceptors/error.interceptor';
 import { NoAuthGuard } from './guards/no-auth.guard';
 import { AuthGuard } from './guards/auth.guard';
 
@@ -17,7 +17,7 @@ import { AuthGuard } from './guards/auth.guard';
     AuthGuard,
     NoAuthGuard,
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
-    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true },
   ],
 })
 export class CoreModule {
