@@ -5,30 +5,33 @@ import { RoutesPreloadingStrategy } from './utils/routes-preloading-strategy';
 
 const routes: Routes = [
   {
-    path: '', component: MainLayoutComponent,
+    path: '',
+    component: MainLayoutComponent,
     children: [
       {
         path: '',
-        loadChildren: () => import("./features/home/home.module").then(m => m.HomeModule)
+        loadChildren: () => import('./features/home/home.module').then((m) => m.HomeModule),
       },
       {
         path: 'about',
-        loadChildren: () => import("./features/about/about.module").then(m => m.AboutModule)
+        loadChildren: () => import('./features/about/about.module').then((m) => m.AboutModule),
       },
-    ]
+    ],
   },
-  { path: "**", redirectTo: "/" }
+  { path: '**', redirectTo: '/' },
 ];
 
 const config: ExtraOptions = {
   preloadingStrategy: RoutesPreloadingStrategy,
   enableTracing: false,
-  scrollPositionRestoration: "top"
+  scrollPositionRestoration: 'top',
+  relativeLinkResolution: 'legacy',
+  paramsInheritanceStrategy: 'always',
 };
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, config),],
+  imports: [RouterModule.forRoot(routes, config)],
   providers: [RoutesPreloadingStrategy],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

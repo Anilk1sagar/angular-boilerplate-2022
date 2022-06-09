@@ -1,4 +1,4 @@
-@import "./scss";
+@import './scss';
 
 html,
 body {
@@ -24,7 +24,7 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-input[type="number"] {
+input[type='number'] {
   -moz-appearance: textfield; /* Firefox */
 }
 
@@ -41,39 +41,39 @@ h6 {
   line-height: 1.2;
 }
 h1 {
-  font-size: map-get($header-sizes, "h1");
+  font-size: map-get($header-sizes, 'h1');
   @media (max-width: $screen-sm) {
-    font-size: map-get($header-sizes-sm, "h1");
+    font-size: map-get($header-sizes-sm, 'h1');
   }
 }
 h2 {
-  font-size: map-get($header-sizes, "h2");
+  font-size: map-get($header-sizes, 'h2');
   @media (max-width: $screen-sm) {
-    font-size: map-get($header-sizes-sm, "h2");
+    font-size: map-get($header-sizes-sm, 'h2');
   }
 }
 h3 {
-  font-size: map-get($header-sizes, "h3");
+  font-size: map-get($header-sizes, 'h3');
   @media (max-width: $screen-sm) {
-    font-size: map-get($header-sizes-sm, "h3");
+    font-size: map-get($header-sizes-sm, 'h3');
   }
 }
 h4 {
-  font-size: map-get($header-sizes, "h4");
+  font-size: map-get($header-sizes, 'h4');
   @media (max-width: $screen-sm) {
-    font-size: map-get($header-sizes-sm, "h4");
+    font-size: map-get($header-sizes-sm, 'h4');
   }
 }
 h5 {
-  font-size: map-get($header-sizes, "h5");
+  font-size: map-get($header-sizes, 'h5');
   @media (max-width: $screen-sm) {
-    font-size: map-get($header-sizes-sm, "h5");
+    font-size: map-get($header-sizes-sm, 'h5');
   }
 }
 h6 {
-  font-size: map-get($header-sizes, "h6");
+  font-size: map-get($header-sizes, 'h6');
   @media (max-width: $screen-sm) {
-    font-size: map-get($header-sizes-sm, "h6");
+    font-size: map-get($header-sizes-sm, 'h6');
   }
 }
 
@@ -111,4 +111,10 @@ h6 {
 }
 .fw-800 {
   font-weight: 800;
+}
+
+.container {
+  max-width: 90%;
+  width: 100%;
+  margin: 0 auto;
 }

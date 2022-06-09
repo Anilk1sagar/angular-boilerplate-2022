@@ -9,9 +9,11 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { HttpErrorInterceptor } from './interceptors/error.interceptor';
 import { NoAuthGuard } from './guards/no-auth.guard';
 import { AuthGuard } from './guards/auth.guard';
+import { HeaderComponent } from './components/layouts/main-layout/header/header.component';
+import { FooterComponent } from './components/layouts/main-layout/footer/footer.component';
 
 @NgModule({
-  declarations: [MainLayoutComponent],
+  declarations: [MainLayoutComponent, HeaderComponent, FooterComponent],
   imports: [CommonModule, RouterModule, HttpClientModule],
   providers: [
     AuthGuard,
