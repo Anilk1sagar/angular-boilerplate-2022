@@ -1,0 +1,69 @@
+// Colors
+$color-primary: #3ebfed;
+$color-red: #ea4a41;
+$color-pink: #ed98bf;
+$color-green: #39b262;
+$color-peach: #ffcdbd;
+$color-white: #fff;
+$color-black: #1e1e1e;
+$color-dark-grey: #818181;
+$color-grey: #e8e9e8;
+$color-light-grey: lighten($color-grey, 3%);
+
+$global-font-color: $color-black;
+$global-font-weights: (
+  "extra-light": 200,
+  "light": 300,
+  "regular": 400,
+  "medium": 500,
+  "semi-bold": 600,
+  "bold": 700,
+  "extra-bold": 800,
+  "black": 900,
+);
+$global-border-radius: 10px;
+$square-border-radius: 5px;
+$card-border-radius: 20px;
+$global-margin-sm: 20px;
+$global-margin-lg: 25px;
+$global-padding-sm: 20px;
+$global-padding-lg: 25px;
+$card-spacing: 15px;
+
+
+// Body
+$body-background: $color-white;
+$body-font-color: $color-black;
+$body-font-weight: map-get($global-font-weights, "regular");
+$body-font-family: "Poppins", "Helvetica Neue", sans-serif;
+$body-font-size: 14px;
+$body-line-height: 1.3;
+
+// Typography
+$header-font-family: $body-font-family;
+$header-font-weight: map-get($global-font-weights, "regular");
+$header-sizes: (
+  "h1": 2.1rem,
+  "h2": 1.8rem,
+  "h3": 1.6rem,
+  "h4": 1.4rem,
+  "h5": 1.2rem,
+  "h6": 1rem,
+);
+$header-sizes-sm: (
+  "h1": 1.9rem,
+  "h2": 1.6rem,
+  "h3": 1.4rem,
+  "h4": 1.2rem,
+  "h5": 1.1rem,
+  "h6": 1rem,
+);
+
+// Break Points
+$screen-xs: 506px;
+$screen-sm: 600px;
+$screen-md: 960px;
+$screen-lg: 1280px;
+$screen-xl: 1920px;
+
+$header-height: 70px;

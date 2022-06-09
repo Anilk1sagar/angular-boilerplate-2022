@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "rm -rf dist && ng build --stats-json",
+    "build:analyze": "webpack-bundle-analyzer dist/angular-boilerplate/stats.json",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -34,6 +35,8 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
-    "typescript": "~4.2.3"
+    "prettier": "^2.6.2",
+    "typescript": "~4.2.3",
+    "webpack-bundle-analyzer": "^4.4.2"
   }
 }
