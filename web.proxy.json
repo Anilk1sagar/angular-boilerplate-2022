@@ -1,0 +1,20 @@
+{
+  "/api/": {
+    "target": "https://dev.joinhala.site/api/v1",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/api": ""
+    }
+  },
+  "/rating/": {
+    "target": "https://dev.joinhala.site/api/v1/rating",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/rating": ""
+    }
+  }
+}
